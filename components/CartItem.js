@@ -28,6 +28,7 @@ const CartItem = ({ cartItem }) => {
     return (
       <CartItemStyles>
         <p>This item has been removed!</p>
+        <RemoveFromCart id={cartItem.id} />
       </CartItemStyles>
     );
 
