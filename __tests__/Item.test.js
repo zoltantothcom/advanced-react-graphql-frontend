@@ -18,7 +18,7 @@ describe('<Item />', () => {
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
 
-  xit('renders the pricetag and title properly', () => {
+  it('renders the pricetag and title properly', () => {
     const wrapper = shallow(<ItemComponent item={fakeItem} />);
 
     expect(
@@ -26,7 +26,7 @@ describe('<Item />', () => {
         .find('PriceTag')
         .children()
         .text(),
-    ).toBe('$50');
+    ).toBe('$40');
 
     expect(
       wrapper
@@ -37,7 +37,7 @@ describe('<Item />', () => {
     ).toBe(fakeItem.title);
   });
 
-  xit('renders the image properly', () => {
+  it('renders the image properly', () => {
     const wrapper = shallow(<ItemComponent item={fakeItem} />);
 
     const img = wrapper.find('img');
@@ -46,7 +46,7 @@ describe('<Item />', () => {
     expect(img.props().alt).toBe(fakeItem.title);
   });
 
-  xit('renders the buttons properly', () => {
+  it('renders the buttons properly', () => {
     const wrapper = shallow(<ItemComponent item={fakeItem} />);
     const buttonList = wrapper.find('.buttonList');
 
