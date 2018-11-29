@@ -30,7 +30,6 @@ class RemoveFromCart extends Component {
     const data = cache.readQuery({
       query: CURRENT_USER_QUERY,
     });
-    console.log(data);
     // remove item from cart
     const cartItemId = payload.data.removeFromCart.id;
 
@@ -77,3 +76,5 @@ RemoveFromCart.propTypes = {
 };
 
 export default RemoveFromCart;
+
+export { REMOVE_FROM_CART_MUTATION };
